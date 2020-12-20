@@ -1,0 +1,11 @@
+<!-- Step 1: Create a start button, instructions for the quiz, and the title of the quiz just above. -->
+<!-- Step 2: Create a timer that starts counting down the moment the user presses 'start'. Timer should be large and obvious. -->
+<!-- Step 3: Write questions. -->
+<!-- Step 4: Create four different, working buttons underneath each question. One button should be the correct one. -->
+<!-- Step 5: If wrong input, small "Wrong!" text should display underneath buttons. '5' seconds off timer. -->
+<!-- Step 6: If right input, small "Correct!" text should display underneath buttons and user continues to next question. '7' second added to timer.-->
+<!-- Step 7: Find a way of stopping quiz if timer runs out. -->
+<!-- Step 8: At end of quiz, display user score. Create input bar for user to input initials and a submit button. -->
+<!-- Step 9: Store user score locally. Read up on localStorage. -->
+<!-- Step 10: Display scoreboard on next page. -->
+<!-- Step 11: Create play again button and a clear highscores button. -->
