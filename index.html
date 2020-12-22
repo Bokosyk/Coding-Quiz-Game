@@ -17,12 +17,31 @@
 
 <body>
   <section>
+    <!-- Card body that holds all the elements -->
     <div class="container-lg">
-      <h1>Penguin Quiz</h1>
-      <p>How much do you know about these amazing animals? Let's find out! The quiz is timed. Get an answer wrong and
-        time
-        is subtracted. Get an answer right and time is extended! Good luck!</p>
-      <button type="button" class="btn btn-light">Start!</button>
+
+      <!-- Container holding all questions. Class of 'hide' makes element hidden by default. -->
+      <div id="quest-cont" class="hide">
+          
+        <div id="question">Question 1</div>
+        <div id="answer-buttons" class="btn-grid"> <!-- "btn-grid" allows styling with CSS"-->
+          <button class="btn">Answer</button>
+          <button class="btn">Answer</button>
+          <button class="btn">Answer</button>
+          <button class="btn">Answer</button>
+        </div>
+      </div>
+
+
+
+
+    
+      <div class="options">
+        <button id="start-btn" class="start-btn btn btn-light">Start!</button>
+
+        <!-- <button id="next-btn" class="next-btn btn btn-light hide">Start!</button> -->
+      </div>
+
     </div>
   </section>
 
