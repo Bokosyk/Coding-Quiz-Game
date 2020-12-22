@@ -1,0 +1,19 @@
+html {
+    background-image: linear-gradient(to bottom, rgb(255,255,255, 0.52), rgba(233, 233, 233, 0.712)),
+  url(https://wallpapermemory.com/uploads/480/penguin-background-full-hd-1080p-149318.jpg);
+   background-color: #353839;
+   height: auto;
+   z-index: 1;
+   padding-top: 100px;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+ }
+ 
+ html, body { margin: 0; padding: 0; } /*RESETS CSS*/
+
+body {
+    text-align: center;
+    padding: 100px 0px 0px 0px;
+}
