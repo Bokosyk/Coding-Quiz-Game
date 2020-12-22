@@ -1,2 +1,2 @@
-# Holiday Quiz Game
-A fun timed quiz that tests out your coding knowledge!
+# Penguin Quiz Game
+A fun timed quiz that tests out your penguin knowledge!
