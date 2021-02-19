@@ -56,9 +56,18 @@ function showQuestion(question) {
 }
 
 function selectAnswer() {
-con
+    const selectedButton = e.target
+    const correct = selectedButton.dataset.correct
+    setStatusClass(document.body, correct)
+    Array.from(answerButtonsElement.children).forEach(button => {
+        setStatusClass(button, button.dataset.correct)
+    })
 
 };
+
+function setStatusClass(element, correct) {
+
+}
 
 //All of the questions for the quiz go here
 const questions = [
