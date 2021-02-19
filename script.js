@@ -1,8 +1,9 @@
 const startButton = document.getElementById('start-btn');
 const questionContainerEl = document.getElementById('quest-cont');
-
+const questionElement = document.getElementById('question');
+const answerButtonsElement = document.getElementById('answer-buttons');
 //Shuffles questions
-const shuffleQuestions, currentQuestionIndex
+let shuffleQuestions, currentQuestionIndex
 
 //Upon clicking, .addEventListener runs a function.
 startButton.addEventListener('click', startQuiz);
@@ -28,8 +29,13 @@ function startQuiz() {
 };
 
 function setNextQuestion() {
-
+showQuestion(shuffledQuestions[currentQuestionIndex])
 };
+
+function showQuestion(question) {
+
+    questionElement.innerText = question.question
+}
 
 function selectAnswer() {
 
