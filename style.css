@@ -34,11 +34,23 @@ body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-    text-align: center;
-    padding: 100px 0px 0px 0px;
-   background-color: none;
+  text-align: center;
+  padding: 100px 0px 0px 0px;
+  background-color: none;
 }
 
-body.correct {
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px 2px;
+}
 
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
 }
