@@ -39,6 +39,7 @@ body {
 }
 
 #question {
+  font-size: 40px;
   font-family: 'Pacifico', cursive;
   margin-bottom: 30px;
 }
@@ -99,12 +100,15 @@ body {
 }
 
 .btn.correct {
-  --hue: var(--hue-correct);
-  color: black;
+  /* --hue: var(--hue-correct); */
+  background-color: lightgreen;
+  transition: 1s;
 }
 
 .btn.wrong {
-  --hue: var(--hue-wrong);
+  /* --hue: var(--hue-wrong); */
+  background-color: red;
+  transition: 1s;
 }
 
 .start-btn, .next-btn {

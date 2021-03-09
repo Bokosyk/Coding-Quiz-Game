@@ -1,10 +1,10 @@
 //Dependencies
+const intro = document.getElementById('intro')
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-const intro = document.getElementById('intro')
 
 // Shuffles questions
 let shuffledQuestions, currentQuestionIndex
@@ -21,6 +21,7 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
+        //Timer conditions
         if (--timer < 0) {
             timer = duration;
         }
@@ -31,7 +32,7 @@ function startTimer(duration, display) {
 // Starts timer upon load
 startButton.onclick = function () {
     var oneMinute = 60 * 1,
-    display = document.querySelector('#time');
+        display = document.querySelector('#time');
     startTimer(oneMinute, display);
 }
 
@@ -71,6 +72,7 @@ function showQuestion(question) {
     })
 }
 
+//Resets everything related to forms, question, body, back to its default state
 function resetState() {
     clearStatusClass(document.body)
     nextButton.classList.add('hide')
@@ -83,6 +85,8 @@ function selectAnswer(e) {
     const selectedButton = e.target
     const correct = selectedButton.dataset.correct
     setStatusClass(document.body, correct)
+
+    //returns a live collection
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
@@ -94,18 +98,38 @@ function selectAnswer(e) {
     }
 }
 
+//Checks right or wrong answers
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
-        element.classList.add('correct')
+        let nice = element.classList.add('correct')
+        timerChange(nice);
+        return nice
+        // element.classList.add('correct')
+
     } else {
-        element.classList.add('wrong')
+        let bad = element.classList.add('wrong')
+        timerChange(bad)
+        return bad
+        // element.classList.add('wrong')
+
     }
 }
 
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
+}
+
+// Changes according to answers
+function timerChange(e) {
+    // if ( good ) {
+    //     --timer + 10
+    // }
+    // else {
+    //     --timer - 10
+    // }
+
 }
 
 const questions = [
