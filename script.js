@@ -5,6 +5,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+// const choice = document.getElementsByClassName('btn');
 
 // Shuffles questions
 let shuffledQuestions, currentQuestionIndex
@@ -24,6 +25,11 @@ function startTimer(duration, display) {
         //Timer conditions
         if (--timer < 0) {
             timer = duration;
+        }
+        else if (questions.answers.correct = false) {
+            timer -= 10;
+
+
         }
 
     }, 1000);
@@ -102,16 +108,16 @@ function selectAnswer(e) {
 function setStatusClass(element, correct) {
     clearStatusClass(element)
     if (correct) {
-        let nice = element.classList.add('correct')
-        timerChange(nice);
-        return nice
-        // element.classList.add('correct')
+        // let nice = element.classList.add('correct')
+        // timerChange(nice);
+        // return nice
+        element.classList.add('correct')
 
     } else {
-        let bad = element.classList.add('wrong')
-        timerChange(bad)
-        return bad
-        // element.classList.add('wrong')
+        // let bad = element.classList.add('wrong')
+        // timerChange(bad)
+        // return bad
+        element.classList.add('wrong')
 
     }
 }
@@ -141,21 +147,21 @@ const questions = [
         ]
     },
     {
-        question: 'Who is the best YouTuber?',
+        question: 'Question 2?',
         answers: [
-            { text: 'Web Dev Simplified', correct: true },
-            { text: 'Traversy Media', correct: true },
-            { text: 'Dev Ed', correct: true },
-            { text: 'Fun Fun Function', correct: true }
+            { text: 'Option 1', correct: true },
+            { text: 'Option 2', correct: false },
+            { text: 'Option 3', correct: false },
+            { text: 'Option 4', correct: false }
         ]
     },
     {
-        question: 'Is web development fun?',
+        question: 'Question 3?',
         answers: [
-            { text: 'Kinda', correct: false },
-            { text: 'YES!!!', correct: true },
-            { text: 'Um no', correct: false },
-            { text: 'IDK', correct: false }
+            { text: 'Option 1', correct: false },
+            { text: 'Option 1', correct: true },
+            { text: 'Option 1', correct: false },
+            { text: 'Option 1', correct: false }
         ]
     },
     {
