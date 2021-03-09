@@ -51,19 +51,31 @@ body {
   flex-direction: column;
 }
 
+/* Question Buttons */
 .btn {
-  background-color: lightgreen;
-  border: 1px solid green;
-  width: 30vw;
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 10px 0 0 0;
-  color: white;
-  outline: none;
+  background-color: #fff;
+  border-color: #745f49!important;
+  border: 2px solid #745f49;
+  font-size: 14px;
+  padding: 12px 300px;
+  margin-left: 3px;
+  margin-bottom: 5px;
+  border-bottom-color: rgb(255,255,255);
+  border-bottom-left-radius: 0px;
+  font-family: Montserrat, sans-serif;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 800px) {
+  .btn {
+  width: 80vw;
+  }
 }
 
 .btn:hover {
-  border-color: black;
+  cursor: pointer;
+  background: #745f49;
+  color: white;
 }
 
 .btn.correct {
