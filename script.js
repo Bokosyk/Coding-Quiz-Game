@@ -29,7 +29,7 @@ function startTimer(duration, display) {
 }
 
 // Starts timer upon load
-window.onload = function () {
+startButton.onclick = function () {
     var oneMinute = 60 * 1,
     display = document.querySelector('#time');
     startTimer(oneMinute, display);
