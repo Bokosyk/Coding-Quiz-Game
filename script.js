@@ -28,6 +28,13 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
+// Starts timer upon load
+window.onload = function () {
+    var oneMinute = 60 * 1,
+    display = document.querySelector('#time');
+    startTimer(oneMinute, display);
+}
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
