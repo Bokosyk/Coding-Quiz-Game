@@ -88,6 +88,11 @@ function setStatusClass(element, correct) {
     }
 }
 
+function clearStatusClass(element) {
+    element.classList.remove('correct')
+    element.classList.remove('wrong')
+}
+
 
 //All of the questions for the quiz go here
 const questions = [
@@ -99,5 +104,95 @@ const questions = [
             { text: '4', correct: true },
             { text: '4', correct: true },
         ]
-    }
+    },
+    {
+        question: "Mr.Senor Jalapeno",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "Mr.Senor Jalapeno",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
+    {
+        question: "What is 2 + 2",
+        answers: [
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+            { text: '4', correct: true },
+        ]
+    },
 ]
