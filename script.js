@@ -9,6 +9,18 @@ const intro = document.getElementById('intro')
 // Shuffles questions
 let shuffledQuestions, currentQuestionIndex
 
+//Timer
+function timer(){
+    var sec = 30;
+    var timer = setInterval(function(){
+        document.getElementById('safeTimerDisplay').innerHTML='00:'+sec;
+        sec--;
+        if (sec < 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
 startButton.addEventListener('click', startGame)
 nextButton.addEventListener('click', () => {
     currentQuestionIndex++
@@ -19,7 +31,7 @@ function startGame() {
     // Hides beginning page
     intro.classList.add('hide')
     startButton.classList.add('hide')
-    
+
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
