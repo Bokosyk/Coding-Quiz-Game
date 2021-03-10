@@ -6,8 +6,8 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 
-// Shuffles questions
-let shuffledQuestions, currentQuestionIndex
+// Sorted questions
+let sortedQuestions, currentQuestionIndex
 
 var count = 99;
 
@@ -40,7 +40,7 @@ function startGame() {
     intro.classList.add('hide')
     startButton.classList.add('hide')
 
-    shuffledQuestions = questions.sort(() => Math.floor() - .5)
+    sortedQuestions = questions.sort(() => Math.floor() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
@@ -48,7 +48,7 @@ function startGame() {
 
 function setNextQuestion() {
     resetState()
-    showQuestion(shuffledQuestions[currentQuestionIndex])
+    showQuestion(sortedQuestions[currentQuestionIndex])
 }
 
 function showQuestion(question) {
@@ -83,7 +83,7 @@ function selectAnswer(e) {
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct)
     })
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    if (sortedQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
         startButton.innerText = 'Restart'
