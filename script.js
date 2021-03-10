@@ -125,7 +125,7 @@ function setStatusClass(element, correct) {
 
 function showScore(result) {
     // Verify to see it works
-    console.log("This also ran!")
+    console.log("showScore ran!")
 
     questionContainerElement.classList.add('hide')
     viewButton.classList.add('hide')
@@ -134,12 +134,20 @@ function showScore(result) {
 
     // document.getElementById('finalscore').innerHTML = "<";
 
+    saveButton.onclick = function () {
+        var nickname = document.getElementById('initials').value;
+        var score = result;
+        console.log(nickname)
+        console.log(score)
+        storeScore(nickname, score)
+
+    }
 
     // Local storage
-    var nickname = "";
-    var score = result;
-    console.log(score)
-
+    function storeScore(a, b) {
+        console.log(a)
+        console.log(b)
+    }
     // localStorage.set(nickname, score);
 
 }
