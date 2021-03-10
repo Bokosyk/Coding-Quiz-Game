@@ -15,7 +15,7 @@ html {
 
  *, *::before, *::after {
    box-sizing: border-box;
-   font-family: Gotham Rounded;
+   font-family: 'Josefin Sans', sans-serif;
  }
 
 body {
@@ -30,6 +30,16 @@ body {
   text-align: center;
   padding: 100px 0px 0px 0px;
   background: none;
+}
+
+#count {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 50px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 20px;
 }
 
 #intro {
@@ -100,13 +110,11 @@ body {
 }
 
 .btn.correct {
-  /* --hue: var(--hue-correct); */
   background-color: lightgreen;
   transition: 1s;
 }
 
 .btn.wrong {
-  /* --hue: var(--hue-wrong); */
   background-color: red;
   transition: 1s;
 }
