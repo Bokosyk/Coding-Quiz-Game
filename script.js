@@ -13,7 +13,7 @@ const leaderBoard = document.getElementById('leaderboards')
 // Sorted questions
 let sortedQuestions, currentQuestionIndex
 
-var count = 99;
+var count = 200;
 
 function startTimer() {
     var interval = setInterval(function () {
