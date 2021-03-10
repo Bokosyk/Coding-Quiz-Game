@@ -8,6 +8,7 @@ const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const scorepage = document.getElementById('finalscore')
+const leaderBoard = document.getElementById('leaderboards')
 
 // Sorted questions
 let sortedQuestions, currentQuestionIndex
@@ -132,7 +133,7 @@ function showScore(result) {
     scorepage.classList.remove('hide')
     saveButton.classList.remove('hide')
 
-    // document.getElementById('finalscore').innerHTML = "<";
+
 
     saveButton.onclick = function () {
         var nickname = document.getElementById('initials').value;
@@ -145,13 +146,29 @@ function showScore(result) {
 
     // Local storage
     function storeScore(a, b) {
-        console.log(a)
-        console.log(b)
-    }
-    // localStorage.set(nickname, score);
 
+        //Stores score and name into local Storage
+        localStorage.setItem(a, b);
+        scoreBoard();
+    }
 }
 
+//Shows the scoreboard from local storage
+function scoreBoard() {
+    scorepage.classList.add('hide')
+    leaderBoard.classList.remove('hide')
+
+    var archive = [],
+        keys = Object.keys(localStorage),
+        i = 0, key;
+
+    for (; key = keys[i]; i++) {
+        archive.push( key + ' = ' + localStorage.getItem(key));
+    }
+
+console.log("Did it print the list?")
+    leaderBoard.innerHTML = archive;
+}
 
 
 
