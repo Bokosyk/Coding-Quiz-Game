@@ -20,7 +20,8 @@ Clone the repo or visit the github page.
 
 ## Usage 
 
-![Screenshot]()
+![Screenshot](https://raw.githubusercontent.com/Bokosyk/Penguin-Quiz-Game/main/Assets/Screenshot%20(118).png)
+![Screenshot](https://raw.githubusercontent.com/Bokosyk/Penguin-Quiz-Game/main/Assets/Screenshot%20(119).png)
 
 Click 'Start" to begin the quiz, starting the timer. Every wrong answer will decrease the amount of time you have to complete the quiz so be careful. Scores are saved locally at the end and a scoreboard is shown, presenting all localStorage.
 
