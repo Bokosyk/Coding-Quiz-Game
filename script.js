@@ -20,14 +20,14 @@ function startTimer() {
         if (count <= 0) {
             console.log("This works!")
             clearInterval(interval);
-            saveScore(count);
+            showScore(count);
             // document.getElementById('count').innerHTML = "Time's up!"
         }
         else {
             viewButton.onclick = function () {
                 console.log("View Scores Worked")
                 clearInterval(interval);
-                saveScore(count);
+                showScore(count);
             };
         }
     }, 1000);
@@ -122,12 +122,15 @@ function setStatusClass(element, correct) {
     }
 }
 
-function saveScore(result) {
-    console.log("This also ran somewhat.")
+function showScore(result) {
+    // Verify to see it works
+    console.log("This also ran!")
 
     questionContainerElement.classList.add('hide')
     viewButton.classList.add('hide')
     scorepage.classList.remove('hide')
+
+    document.getElementById('finalscore').innerHTML = "<";
 
 
     // Local storage
