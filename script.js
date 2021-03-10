@@ -5,6 +5,7 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
+const scorepage = document.getElementById('finalscore')
 
 // Sorted questions
 let sortedQuestions, currentQuestionIndex
@@ -15,10 +16,11 @@ function startTimer() {
     var interval = setInterval(function () {
         document.getElementById('count').innerHTML = count;
         count--;
-        if (count <= 0) {
+        if (count <= 0 || currentQuestionIndex == 3) {
+            console.log("This works!")
             clearInterval(interval);
-            document.getElementById('count').innerHTML = "Time's up!"
-            // startGame();
+            saveScore(count);
+            // document.getElementById('count').innerHTML = "Time's up!"
 
         }
     }, 1000);
@@ -52,6 +54,7 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
+    // Writes the sortedQuestions[currentQuestionIndex] into HTML
     questionElement.innerText = question.question
     question.answers.forEach(answer => {
         const button = document.createElement('button')
@@ -112,22 +115,26 @@ function setStatusClass(element, correct) {
     }
 }
 
-// function saveScore() {
+function saveScore(result) {
+    console.log("This also ran somewhat.")
 
-//     // Local storage
-//     var nickname = "";
-//     var score = [];
+    scorepage.classList.remove('hide')
 
-//     localStorage.set(nickname, score);
 
-// }
+    // Local storage
+    var nickname = "";
+    var score = result;
+
+    localStorage.set(nickname, score);
+
+}
 
 
 
 
 const questions = [
     {
-        question: 'What is 2 + 2?',
+        question: 'Question 1',
         answers: [
             { text: '4', correct: true },
             { text: '22', correct: false }
@@ -152,7 +159,7 @@ const questions = [
         ]
     },
     {
-        question: 'What is 4 * 2?',
+        question: 'Question 4?',
         answers: [
             { text: '6', correct: false },
             { text: '8', correct: true }
