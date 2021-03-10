@@ -5,41 +5,28 @@ const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
-// const choice = document.getElementsByClassName('btn');
 
 // Shuffles questions
 let shuffledQuestions, currentQuestionIndex
 
-//Timer
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
+var count = 99;
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        display.textContent = minutes + ":" + seconds;
-
-        //Timer conditions
-        if (--timer < 0) {
-            timer = duration;
+function startTimer() {
+    var interval = setInterval(function () {
+        document.getElementById('count').innerHTML = count;
+        count--;
+        if (count === 0) {
+            clearInterval(interval);
+            alert("You're out of time!")
         }
-        else if (questions.answers.correct = false) {
-            timer -= 10;
-
-
-        }
-
     }, 1000);
 }
 
 // Starts timer upon load
 startButton.onclick = function () {
     var oneMinute = 60 * 1,
-        display = document.querySelector('#time');
-    startTimer(oneMinute, display);
+        display = document.querySelector('#count');
+    startTimer();
 }
 
 startButton.addEventListener('click', startGame)
