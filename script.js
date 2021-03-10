@@ -15,7 +15,7 @@ function startTimer() {
     var interval = setInterval(function () {
         document.getElementById('count').innerHTML = count;
         count--;
-        if (count === 0) {
+        if (count <= 0) {
             clearInterval(interval);
             alert("You're out of time!")
         }
@@ -24,8 +24,6 @@ function startTimer() {
 
 // Starts timer upon load
 startButton.onclick = function () {
-    var oneMinute = 60 * 1,
-        display = document.querySelector('#count');
     startTimer();
 }
 
@@ -91,38 +89,25 @@ function selectAnswer(e) {
     }
 }
 
-//Checks right or wrong answers
-function setStatusClass(element, correct) {
-    clearStatusClass(element)
-    if (correct) {
-        // let nice = element.classList.add('correct')
-        // timerChange(nice);
-        // return nice
-        element.classList.add('correct')
-
-    } else {
-        // let bad = element.classList.add('wrong')
-        // timerChange(bad)
-        // return bad
-        element.classList.add('wrong')
-
-    }
-}
-
 function clearStatusClass(element) {
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
 
-// Changes according to answers
-function timerChange(e) {
-    // if ( good ) {
-    //     --timer + 10
-    // }
-    // else {
-    //     --timer - 10
-    // }
+//Checks right or wrong answers
+function setStatusClass(element, correct) {
+    clearStatusClass(element)
+    if (correct) {
+        count += 10;
+        element.classList.add('correct')
+        
 
+    } else {
+        count -= 10;
+        element.classList.add('wrong')
+        
+
+    }
 }
 
 const questions = [
