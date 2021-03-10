@@ -18,6 +18,7 @@ function startTimer() {
         if (count <= 0) {
             clearInterval(interval);
             document.getElementById('count').innerHTML = "Time's up!"
+            // startGame();
 
         }
     }, 1000);
@@ -39,7 +40,7 @@ function startGame() {
     intro.classList.add('hide')
     startButton.classList.add('hide')
 
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    shuffledQuestions = questions.sort(() => Math.floor() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
     setNextQuestion()
