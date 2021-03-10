@@ -166,7 +166,7 @@ function scoreBoard() {
         archive.push( key + ' = ' + localStorage.getItem(key));
     }
 
-console.log("Did it print the list?")
+    // Prints list
     leaderBoard.innerHTML = archive;
 }
 
@@ -174,35 +174,64 @@ console.log("Did it print the list?")
 
 const questions = [
     {
-        question: 'Question 1',
+        question: 'How many species of penguin are there?',
         answers: [
-            { text: '4', correct: true },
-            { text: '22', correct: false }
+            { text: '18', correct: true },
+            { text: '5', correct: false },
+            { text: '9', correct: false },
+            { text: '45', correct: false },
         ]
     },
     {
-        question: 'Question 2?',
+        question: 'How long can penguins stay underwater?',
         answers: [
-            { text: 'Option 1', correct: true },
-            { text: 'Option 2', correct: false },
-            { text: 'Option 3', correct: false },
-            { text: 'Option 4', correct: false }
+            { text: '5 minutes', correct: false },
+            { text: '10 minutes', correct: false },
+            { text: '20 minutes', correct: true },
+            { text: 'Indefinitely', correct: false }
         ]
     },
     {
-        question: 'Question 3?',
+        question: 'What do penguins tuxedo-like coloration help with?',
         answers: [
-            { text: 'Option 1', correct: false },
-            { text: 'Option 1', correct: true },
-            { text: 'Option 1', correct: false },
-            { text: 'Option 1', correct: false }
+            { text: 'Attract mates', correct: false },
+            { text: 'Camoflauge', correct: true },
+            { text: 'Lay eggs', correct: false },
+            { text: 'Sunbathing', correct: false }
         ]
     },
     {
-        question: 'Question 4?',
+        question: 'True or False. Penguins eyes work better underwater',
         answers: [
-            { text: '6', correct: false },
-            { text: '8', correct: true }
+            { text: 'False', correct: false },
+            { text: 'True', correct: true }
         ]
-    }
+    },
+    {
+        question: 'What species of penguin is the largest?',
+        answers: [
+            { text: 'Rockhopper', correct: false },
+            { text: 'King', correct: false },
+            { text: 'Gentoo', correct: false },
+            { text: 'Emperor', correct: true }
+        ]
+    },
+    {
+        question: 'What species of penguin is the smallest?',
+        answers: [
+            { text: 'Adelie', correct: false },
+            { text: 'Little', correct: true },
+            { text: 'Chinstrap', correct: false },
+            { text: 'Galapagos', correct: false }
+        ]
+    },
+    {
+        question: 'Which species of penguins do not nest?',
+        answers: [
+            { text: 'Southern Rockhopper', correct: false },
+            { text: 'King', correct: true },
+            { text: 'Emperor', correct: true },
+            { text: 'African', correct: false }
+        ]
+    },
 ]
