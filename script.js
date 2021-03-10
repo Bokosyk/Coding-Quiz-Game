@@ -2,6 +2,7 @@
 const intro = document.getElementById('intro')
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
+const viewButton = document.getElementById('viewscore')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -124,6 +125,7 @@ function saveScore(result) {
     // Local storage
     var nickname = "";
     var score = result;
+    console.log(score)
 
     localStorage.set(nickname, score);
 
