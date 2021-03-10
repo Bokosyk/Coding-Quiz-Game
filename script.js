@@ -23,7 +23,7 @@ function startTimer() {
             saveScore(count);
             // document.getElementById('count').innerHTML = "Time's up!"
         }
-        else () => {
+        else {
             viewButton.onclick = function () {
                 console.log("View Scores Worked")
                 clearInterval(interval);
