@@ -17,12 +17,18 @@ function startTimer() {
     var interval = setInterval(function () {
         document.getElementById('count').innerHTML = count;
         count--;
-        if (count <= 0 || currentQuestionIndex == 3) {
+        if (count <= 0) {
             console.log("This works!")
             clearInterval(interval);
             saveScore(count);
             // document.getElementById('count').innerHTML = "Time's up!"
-
+        }
+        else () => {
+            document.getElementById('viewscore').onclick = function () {
+                console.log("View Scores Worked")
+                clearInterval(interval);
+                saveScore(count);
+            };
         }
     }, 1000);
 }
@@ -90,8 +96,8 @@ function selectAnswer(e) {
     if (sortedQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide')
     } else {
-        startButton.innerText = 'Restart'
-        startButton.classList.remove('hide')
+        // startButton.innerText = 'Restart'
+        viewButton.classList.remove('hide')
     }
 }
 
@@ -119,6 +125,8 @@ function setStatusClass(element, correct) {
 function saveScore(result) {
     console.log("This also ran somewhat.")
 
+    questionContainerElement.classList.add('hide')
+    viewButton.classList.add('hide')
     scorepage.classList.remove('hide')
 
 
@@ -127,7 +135,7 @@ function saveScore(result) {
     var score = result;
     console.log(score)
 
-    localStorage.set(nickname, score);
+    // localStorage.set(nickname, score);
 
 }
 
