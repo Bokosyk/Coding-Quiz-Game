@@ -3,6 +3,7 @@ const intro = document.getElementById('intro')
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const viewButton = document.getElementById('viewscore')
+const saveButton = document.getElementById('savescore')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
@@ -129,8 +130,9 @@ function showScore(result) {
     questionContainerElement.classList.add('hide')
     viewButton.classList.add('hide')
     scorepage.classList.remove('hide')
+    saveButton.classList.remove('hide')
 
-    document.getElementById('finalscore').innerHTML = "<";
+    // document.getElementById('finalscore').innerHTML = "<";
 
 
     // Local storage
