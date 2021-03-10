@@ -18,7 +18,7 @@ function startTimer() {
         if (count <= 0) {
             clearInterval(interval);
             document.getElementById('count').innerHTML = "Time's up!"
-            
+
         }
     }, 1000);
 }
@@ -101,15 +101,28 @@ function setStatusClass(element, correct) {
     if (correct) {
         count += 10;
         element.classList.add('correct')
-        
+
 
     } else {
         count -= 10;
         element.classList.add('wrong')
-        
+
 
     }
 }
+
+// function saveScore() {
+
+//     // Local storage
+//     var nickname = "";
+//     var score = [];
+
+//     localStorage.set(nickname, score);
+
+// }
+
+
+
 
 const questions = [
     {
