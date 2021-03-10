@@ -17,7 +17,8 @@ function startTimer() {
         count--;
         if (count <= 0) {
             clearInterval(interval);
-            alert("You're out of time!")
+            document.getElementById('count').innerHTML = "Time's up!"
+            
         }
     }, 1000);
 }

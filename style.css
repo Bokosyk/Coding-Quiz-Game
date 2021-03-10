@@ -133,6 +133,23 @@ body {
   flex-direction: column;
 }
 
+/* VIEW HIGH SCORES TAB */
+#link {
+  display: block;
+  color: rgb(rgba(9, 10, 12, 0.329), green, blue);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px 0 0 20px;
+
+}
+
+#link:hover {
+color: rgb(rgb(230, 219, 219), green, blue)
+}
+
 .hide {
   display: none;
 }
