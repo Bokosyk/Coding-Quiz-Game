@@ -55,8 +55,6 @@ To reach me for any questions or concerns, see below.
 
 Github Link: https://www.github.com/Bokosyk 
 
-Email: lparrado321@gmail.com
-
 ---
 
 © 2021. All Rights Reserved.
