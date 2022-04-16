@@ -134,7 +134,7 @@ body {
 }
 
 /* VIEW HIGH SCORES TAB */
-#link {
+#highscores {
   display: block;
   color: rgb(rgba(9, 10, 12, 0.329), green, blue);
   font-family: 'Josefin Sans', sans-serif;
@@ -146,7 +146,7 @@ body {
 
 }
 
-#link:hover {
+#highscores:hover {
 color: rgb(rgb(230, 219, 219), green, blue)
 }
 

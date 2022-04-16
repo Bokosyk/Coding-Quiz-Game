@@ -9,6 +9,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const scorepage = document.getElementById('finalscore')
 const leaderBoard = document.getElementById('leaderboards')
+const highScore = document.getElementById('highscores')
 
 // Sorted questions
 let sortedQuestions, currentQuestionIndex
@@ -17,21 +18,24 @@ var count = 200;
 
 function startTimer() {
     var interval = setInterval(function () {
+        // Makes count displayed in HTML
         document.getElementById('count').innerHTML = count;
         count--;
-        if (count <= 0) {
-            console.log("This works!")
-            clearInterval(interval);
-            showScore(count);
-            // document.getElementById('count').innerHTML = "Time's up!"
-        }
-        else {
-            viewButton.onclick = function () {
-                console.log("View Scores Worked")
+        switch (true) {
+            case (count <= 0):
+                console.log("This works!")
                 clearInterval(interval);
                 showScore(count);
-            };
+                break;
+            //WIP, attempt to show HighScore upon click
+            default:
+                viewButton.onclick = function () {
+                    console.log("View Scores Worked")
+                    clearInterval(interval);
+                    showScore(count);
+                };
         }
+        // 1000 milliseconds = 1 second
     }, 1000);
 }
 
@@ -163,7 +167,7 @@ function scoreBoard() {
         i = 0, key;
 
     for (; key = keys[i]; i++) {
-        archive.push( key + ' = ' + localStorage.getItem(key));
+        archive.push(key + ' = ' + localStorage.getItem(key));
     }
 
     // Prints list
