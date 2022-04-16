@@ -16,6 +16,12 @@ let sortedQuestions, currentQuestionIndex
 
 var count = 200;
 
+// High Score Button
+highScore.addEventListener("click", () => {
+        console.log("Testing")
+        scoreBoard()
+})
+
 function startTimer() {
     var interval = setInterval(function () {
         // Makes count displayed in HTML
@@ -27,12 +33,11 @@ function startTimer() {
                 clearInterval(interval);
                 showScore(count);
                 break;
-            //WIP, attempt to show HighScore upon click
             default:
                 viewButton.onclick = function () {
                     console.log("View Scores Worked")
-                    clearInterval(interval);
-                    showScore(count);
+                    clearInterval(interval)
+                    showScore(count)
                 };
         }
         // 1000 milliseconds = 1 second
